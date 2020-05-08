@@ -1,0 +1,3 @@
+APScheduler
+pymongo
+Scrapy

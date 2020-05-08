@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  db:
+    container_name: dsebd_mongo
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    restart: always
+
+  web:
+    build: .
+    command: scrapy crawl dayendarchive -o data.json # dump in data.json
+    volumes:
+      - .:/app
+    depends_on:
+      - db
