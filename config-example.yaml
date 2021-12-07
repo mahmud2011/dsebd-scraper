@@ -1,0 +1,10 @@
+database:
+  host: localhost
+  port: 3306
+  user: root
+  pass: root
+  name: dsebd-scraper
+  conn_max_lifetime: 30
+  max_idle_conn: 1
+  max_open_conn: 3
+  debug: true
